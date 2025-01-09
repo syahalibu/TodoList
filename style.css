@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --backgroundBlack: #111111;
+  --cardBlack: #1e1e1e;
+  --cardBlack50: #181818;
+  --fontRed: #c51927;
+  --fontWhite: #efefee;
+  --goldPrem: #ffd700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Merriweather', serif; */
+}
+
+body {
+  background-color: var(--backgroundBlack);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--fontWhite);
+}
+
+header {
+  color: var(--goldPrem);
+  text-shadow: 1px 2px 4px var(--fontRed);
+  font-size: 2rem;
+  font-family: 'Amatic SC', serif;
+  text-align: center;
+}
+
+#new-list-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-list-input {
+  flex: 1 1 0%;
+  background-color: var(--cardBlack);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--fontWhite);
+  font-size: 1.25rem;
+}
+
+#new-list-input::placeholder {
+  color: gray;
+}
+
+#new-list-submit {
+  color: var(--fontRed);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-list-submit:hover {
+  opacity: 0.8;
+}
+
+#new-list-submit:active {
+  opacity: 0.6;
+}
+
+main {
+  font-family: 'Merriweather', serif;
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  color: var(--goldPrem);
+  text-shadow: 0px 2px 4px var(--fontRed);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--cardBlack50);
+}
+
+#task .task .content {
+  flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+  color: var(--fontWhite);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: var(--goldPrem);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  color: var(--goldPrem);
+}
+
+.task .actions .delete {
+  color: var(--fontRed);
+}
